@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Website Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/python.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Website Code Generator</h1>
+            <p>Generate website code using AI. Powered by open-source models.</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <h2>Enter Your Requirements</h2>
+                <form id="codeGenerationForm">
+                    <div class="form-group">
+                        <label for="prompt">Describe what you want to build:</label>
+                        <textarea id="prompt" name="prompt" rows="6" placeholder="Example: Create a responsive landing page for a coffee shop with a navigation menu, hero section, product showcase, and contact form."></textarea>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="enhancePrompt" name="enhancePrompt" checked>
+                        <label for="enhancePrompt">Enhance prompt with vector search</label>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" id="generateBtn">Generate Code</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="loader" id="loader">
+                    <div class="spinner"></div>
+                    <p>Generating code...</p>
+                </div>
+
+                <div class="results-content" id="resultsContent" style="display: none;">
+                    <h2>Generated Code Files</h2>
+                    
+                    <div class="tabs" id="fileTabs">
+                        <!-- File tabs will be generated here -->
+                    </div>
+                    
+                    <div class="code-view">
+                        <pre><code id="codeDisplay" class="hljs"></code></pre>
+                    </div>
+                    
+                    <div class="download-section">
+                        <button id="downloadAllBtn">Download All Files</button>
+                        <button id="downloadCurrentBtn">Download Current File</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 AI Code Generator | Using Open Source Models | Running 100% Locally</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
